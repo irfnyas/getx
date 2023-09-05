@@ -52,9 +52,9 @@ class RouterReportManager<T> {
 
   void reportRouteDispose(T disposed) {
     if (Get.smartManagement != SmartManagement.onlyBuilder) {
-      ambiguate(WidgetsBinding.instance)!.addPostFrameCallback((_) {
+      // ambiguate(WidgetsBinding.instance)!.addPostFrameCallback((_) {
         _removeDependencyByRoute(disposed);
-      });
+      // });
     }
   }
 
